@@ -14,6 +14,17 @@ printPyramid(5);
  *      ######
  */
  function printPyramid(height) {
- for (var brick = "##"; brick.length <= height + 1; brick+="#")
- console.log(brick)
+   for (var brick = 2; brick <= height + 1; brick++) {
+     var str = "";
+    //  console.log("brick ", brick);
+     var layer = height-(brick-1);
+     if (layer>0) {
+       var spaces = " ".repeat(layer);
+       str += spaces;
+      //  console.log("layer ", layer);
+     }
+      var bricks = "#".repeat(brick);
+      str += bricks;
+      console.log(str);
+   }
  }
